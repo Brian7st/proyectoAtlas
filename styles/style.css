@@ -72,9 +72,10 @@ header img {
     display: flex;
     flex-direction: column;
     padding: 7rem 5rem;
-    gap: 10rem;
-    background: linear-gradient(-10deg,#00ffad 50%,#ffffff 50%);
+    gap: 14rem;
+    background: linear-gradient(344deg,#00ffad 44%,#ffffff 44%);
 }
+
 
 .divSeccionTwo{
     display: flex;
@@ -134,7 +135,8 @@ header img {
 .sectionthree{
     display: flex;
     flex-direction: column;
-    padding: 8rem;
+    gap: 5rem;
+    height: auto;
 }
 .titulo{
     display: flex;
@@ -146,7 +148,48 @@ header img {
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
 }
-.tarjeta2{
-    background-color: var(--color-fondo-azul);
-
+.tarjeta1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    text-align: center;
+    gap: 2rem;
+    padding: 2.5rem 0rem;
 }
+
+.tarjeta1 ul li{
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.price {
+    display: flex;
+    align-items: flex-end;
+    gap: 7px;
+    font-weight: bold;
+}
+
+.amount {
+    font-size: clamp(1.5rem, 5vw, 4rem);
+    font-weight: bold;
+}
+
+.label {
+    margin-top: 6px;
+    font-weight: bold;
+}
+
+.botton1{
+    padding: 0.5rem 1.1rem;
+    border-radius: 50px;
+    background-color: transparent;
+    border-color: #000;
+}
+
+#colorMorado {
+    background-color: var(--color-fondo-carta-azul);
+    padding: 2.5rem 6rem;
+}
+

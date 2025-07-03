@@ -50,7 +50,7 @@
 
 
 
- .fondoimagen{
+.fondoimagen{
     background-image: url(../assets/banner-bk.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -104,7 +104,7 @@ header img {
     display: flex;
     flex-direction: column;
     padding: 7rem 5rem;
-    gap: 14rem;
+    gap: clamp(6rem, 11vw, 14rem);
     background: linear-gradient(344deg,#00ffad 44%,#ffffff 44%);
 }
 
@@ -117,11 +117,11 @@ header img {
     gap: 5rem;
 }
 .divSeccionTwo h2{
-    font-size: clamp(1.5rem, 5vw,3rem);
+    font-size: clamp(1.2rem, 5vw,3rem);
 }
 .containeSecciontwo{
     display: flex;
-    gap: 13rem;
+    gap: clamp(1rem, 8vw, 13rem);
     text-align: center;
 }
 .imagendiv{
@@ -145,17 +145,21 @@ header img {
     gap: 2.5rem;
 }
 .container2Div h2{
-    font-size: clamp(0.8rem, 5vw,3rem);
+    font-size: clamp(0.8rem, 4vw,3rem);
 }
 .container2Div p{
-    font-size: clamp(0.5rem,5vw,1rem);
+    font-size: clamp(0.5rem,2.5vw,1rem);
 }
 .container3{
     display: flex;
-    gap: 15rem;
+    gap: clamp(6rem, 11vw, 14rem);
+}
+.imagenTablec{
+    height: auto;
+    width: auto;
 }
 .button-azul{
-     display: inline-block;
+    display: inline-block;
     background-color: var(--color-fondo-azul);
     padding: 10px 23px;
     color:var(--color-letra-blanco);
@@ -264,8 +268,7 @@ header img {
     background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 8rem;
+    padding: 8rem 4rem;
     
 }
 .seccion4Div{
@@ -311,7 +314,7 @@ header img {
     background-color: transparent;
     height: 5rem;
     border: none;
-   border: #00ffad solid 0.4px;;
+    border: #00ffad solid 0.4px;;
 }
 
 .buttomVerde{
@@ -362,4 +365,86 @@ footer {
 .iconos-footer a:hover {
     background-color: var(--color-fondo-gris);
     color: white;
+}
+
+@media (max-width:1279px){
+    .SeccionTwo{
+        background: linear-gradient(341deg,#00ffad 41%,#ffffff 41%);
+    }
+    .tarjetas{
+        gap: 5rem;
+    }
+    .seccion4Div{
+    gap: 5rem;
+}
+}
+@media(max-width:920px){
+    .container2Div{
+        gap: 1rem;
+    }
+    .container3{
+        gap: clamp(3rem, 7vw, 14rem);
+    }
+    .sectionthree{
+        padding: 4rem 0rem;
+    }
+    .tarjetas{
+        gap: 2rem;
+    }
+    .seccion4{
+        padding: 8rem 0rem;
+    }
+    .seccion4Div{
+    gap: 3rem;
+    }
+}
+@media(max-width:768px){
+    .fondoimagen{
+        padding: 5rem 1rem;
+    }
+    .SeccionTwo{
+        background: linear-gradient(340deg, #00ffad 37%, #ffffff 37%);
+    }
+    .container2{
+        gap: 2rem;
+    }
+    .imagenCompu  img{
+        width: 100%;
+        height: auto;
+        margin-top: 2rem;
+    }
+    .container3{
+        gap: 0;
+    }
+    .SeccionTwo{
+        padding: 5rem 1rem;
+    }
+    .imagenTablec{
+        width: 20rem;
+    }
+    .tarjetas{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
+    .seccion_imagenes{
+        padding:3rem 1rem;
+    }
+    .seccion4{
+        padding: 5rem 1rem;
+    }
+    .seccion4Div{
+        flex-direction: column;
+    }
+    footer{
+        padding: 18px 7px;
+    }
+}
+@media(max-width:480px){
+    header img {
+        width: min(100%, 11vw);
+    }
+    .containeSecciontwo {
+        flex-direction: column;
+        align-items: center;
+    }
 }

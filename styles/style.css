@@ -145,14 +145,14 @@ header img {
     gap: 2.5rem;
 }
 .container2Div h2{
-    font-size: clamp(0.8rem, 5vw,3rem);
+    font-size: clamp(0.8rem, 4vw,3rem);
 }
 .container2Div p{
-    font-size: clamp(0.5rem,5vw,1rem);
+    font-size: clamp(0.5rem,4vw,1rem);
 }
 .container3{
     display: flex;
-    gap: 15rem;
+    gap: clamp(10rem, 5vw,15rem);
 }
 .button-azul{
      display: inline-block;

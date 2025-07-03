@@ -6,7 +6,6 @@
  :root {
   /* Colores */
   --color-verde: #00ffad;
-  --color-fondo-carta-azul: #192440;
   --color-fondo-gris: #eceeef;
   --color-fondo-azul: #192440;
   --color-letra-gris: #e4dfdf;
@@ -50,7 +49,7 @@
 
 
 
- .fondoimagen{
+.fondoimagen{
     background-image: url(../assets/banner-bk.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -89,22 +88,31 @@ header img {
     color: var(--color-letra-gris);
     font-size: clamp(0.5rem, 5vw, 1.1rem);
 }
-.button-verde{
-    display: inline-block;
-    background-color: var(--color-verde);
-    padding: 10px 19px;
-    color:var(--color-letra-negro);
-    border-radius: 1rem;
-    text-decoration: none;
-    font-family: clamp(0.5rem,3vw,0.6rem);
+.btn {
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
     font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    font-size: clamp(0.7rem, 5vw, 0.9rem);
+    text-align: center;
+}
+
+
+.btn-verde{
+    background-color: var(--color-verde);
+    color: var(--color-letra-negro);
+}
+.btn-verde:hover {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
 }
 .SeccionTwo{
     height: auto;
     display: flex;
     flex-direction: column;
     padding: 7rem 5rem;
-    gap: 14rem;
+    gap: clamp(6rem, 11vw, 14rem);
     background: linear-gradient(344deg,#00ffad 44%,#ffffff 44%);
 }
 
@@ -117,11 +125,11 @@ header img {
     gap: 5rem;
 }
 .divSeccionTwo h2{
-    font-size: clamp(1.5rem, 5vw,3rem);
+    font-size: clamp(1.2rem, 5vw,3rem);
 }
 .containeSecciontwo{
     display: flex;
-    gap: 13rem;
+    gap: clamp(1rem, 5vw, 13rem);
     text-align: center;
 }
 .imagendiv{
@@ -145,25 +153,22 @@ header img {
     gap: 2.5rem;
 }
 .container2Div h2{
-    font-size: clamp(0.8rem, 4vw,3rem);
+    font-size: clamp(0.8rem, 7vw,3rem);
 }
 .container2Div p{
     font-size: clamp(0.5rem,4vw,1rem);
 }
 .container3{
     display: flex;
-    gap: clamp(10rem, 5vw,15rem);
+    gap: clamp(6rem, 11vw, 14rem);
 }
-.button-azul{
-     display: inline-block;
+.imagenTablec{
+    height: auto;
+    width: auto;
+}
+.btn-azul{
     background-color: var(--color-fondo-azul);
-    padding: 10px 23px;
-    color:var(--color-letra-blanco);
-    border-radius: 1rem;
-    text-decoration: none;
-    font-family: clamp(0.5rem,3vw,0.6rem);
-    font-weight: bold;
-
+    color: var(--color-letra-blanco);
 }
 .imagenCompu img {
     height: auto;
@@ -191,6 +196,7 @@ header img {
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
 }
+
 .tarjeta1{
     display: flex;
     flex-direction: column;
@@ -228,22 +234,20 @@ header img {
     padding: 0.8rem 1.3rem;
     border-radius: 50px;
     background-color: transparent;
-    border-color: #000;
+}
+.btn-borde{
+    border: 1px #000 solid;
 }
 
 #colorMorado {
-    background-color: var(--color-fondo-carta-azul);
+    background-color: var(--color-fondo-azul);
     padding: 2.5rem 6rem;
     color: var(--color-letra-blanco);
 }
 
-#bottonVerde{
-    background-color: var(--color-verde);
-}
 .seccion_imagenes{
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 5rem;
     background-color:var(--color-fondo-gris);
     height: auto;
@@ -251,7 +255,7 @@ header img {
 }
 .imagenesDiv{
     display: flex;
-    gap: clamp(2rem,5vw,9rem);
+    gap: clamp(1rem,5vw,9rem);
 }
 .imagenesDiv img {
     height: auto;
@@ -264,8 +268,7 @@ header img {
     background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 8rem;
+    padding: 8rem 4rem;
     
 }
 .seccion4Div{
@@ -311,20 +314,10 @@ header img {
     background-color: transparent;
     height: 5rem;
     border: none;
-   border: #00ffad solid 0.4px;;
+    border: #00ffad solid 0.4px;;
 }
 
-.buttomVerde{
-    display: inline-block;
-    background-color: var(--color-verde);
-    padding: 10px 19px;
-    color:var(--color-letra-negro);
-    border-radius: 1rem;
-    text-decoration: none;
-    font-family: clamp(0.5rem,3vw,0.6rem);
-    font-weight: bold;
-    text-align: center;
-}
+
 footer {
     background-color: #141d35;
     color: white;
@@ -362,4 +355,137 @@ footer {
 .iconos-footer a:hover {
     background-color: var(--color-fondo-gris);
     color: white;
+}
+
+@media (max-width:1279px){
+    .SeccionTwo{
+        background: linear-gradient(341deg,#00ffad 41%,#ffffff 41%);
+    }
+    .tarjetas{
+        gap: 5rem;
+    }
+    .seccion4Div{
+    gap: 5rem;
+}
+}
+@media(max-width:920px){
+    .container2Div{
+        gap: 1rem;
+    }
+    .container3{
+        gap: clamp(3rem, 7vw, 14rem);
+    }
+    .sectionthree{
+        padding: 4rem 0rem;
+    }
+    .tarjetas{
+        gap: 2rem;
+    }
+    .seccion4{
+        padding: 8rem 0rem;
+    }
+    .seccion4Div{
+    gap: 3rem;
+    }
+}
+@media(max-width:768px){
+    .fondoimagen{
+        padding: 5rem 1rem;
+    }
+    .SeccionTwo{
+        background: linear-gradient(340deg, #00ffad 37%, #ffffff 37%);
+    }
+    .container2{
+        gap: 2rem;
+    }
+    .imagenCompu  img{
+        width: 100%;
+        height: auto;
+        margin-top: 2rem;
+    }
+    .container3{
+        gap: 0;
+    }
+    .SeccionTwo{
+        padding: 5rem 1rem;
+    }
+    .imagenTablec{
+        width: 20rem;
+    }
+    .tarjetas{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
+    .seccion_imagenes{
+        padding:3rem 1rem;
+    }
+    .seccion4{
+        padding: 5rem 1rem;
+    }
+    .seccion4Div{
+        flex-direction: column;
+    }
+    footer{
+        padding: 18px 7px;
+    }
+}
+@media(max-width:480px){
+    header img {
+        width: min(100%, 11vw);
+    }
+    .SeccionTwo{
+        background: linear-gradient(340deg, #00ffad 30%, #ffffff 30%);
+    }
+    .SeccionTwo{
+        padding: 3rem 1rem;
+    }
+    .container2{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    .imagenCompu img{
+        margin-top: 0;
+    }
+    .container3{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+    .containeSecciontwo {
+        flex-direction: column;
+        align-items: center;
+    }
+    .imagenTablec img {
+        width: 18rem;
+        height: auto;
+        margin-left: 3.8rem;
+    }
+    .sectionthree{
+        gap: 1rem;
+    }
+    .imagenesDiv{
+        flex-wrap: wrap;
+        gap: 3rem;
+    }
+    .imagenesDiv img {
+        height: auto;
+        width: 4rem;
+    }
+    .formulario1{
+        gap: 0.5rem;
+    }
+    .campoFormulario{
+        width: 10rem;
+    }
+    .iconos-footer i{
+        font-size: 1.2rem;
+    }
+    .iconos-footer a {
+        width: 30px;
+        height: 30px;
+    }
+    .texto-footer{
+        font-size:0.8rem ;
+    }
 }
